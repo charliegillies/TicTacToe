@@ -35,7 +35,7 @@ void Game::startGame()
 	while (true)
 	{
 		// print the message saying who's turn it is next
-		cout << getNextTurnMsg() << endl;
+		cout << endl << getNextTurnMsg() << endl;
 		
 		// get the next game turn agent
 		IGameAgent *turnAgent = getNextPlayer();

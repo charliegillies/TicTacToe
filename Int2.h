@@ -10,4 +10,6 @@ public:
 	int Y;
 
 	Int2(int X, int Y);
+
+	void Set(Int2 value);
 };

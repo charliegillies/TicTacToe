@@ -34,6 +34,7 @@ class GameGrid
 {
 private:
 	char _grid[NUM_ROWS][NUM_COLUMNS];
+
 	bool validCoords(int x, int y);
 	bool inLine(int x, int y, char nodeValue);
 	bool compareNodes(int x, int y, char nodeValue) const;
@@ -56,4 +57,5 @@ public:
 	void printGrid();
 
 	GameGrid createClone();
+	GameGrid createChild(int x, int y, char value);
 };

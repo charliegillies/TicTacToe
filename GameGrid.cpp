@@ -160,5 +160,23 @@ void GameGrid::printGrid()
 
 GameGrid GameGrid::createClone()
 {
+	GameGrid grid;
 
+	for (int row = 0; row < NUM_ROWS; row++)
+	{
+		for (int col = 0; col < NUM_COLUMNS; col++)
+		{
+			char c = _grid[row][col];
+			grid.markGridMove(row, col, c);
+		}
+	}
+
+	return grid;
+}
+
+GameGrid GameGrid::createChild(int x, int y, char value)
+{
+	GameGrid child = createClone();
+	child.markGridMove(x, y, value);
+	return child;
 }
